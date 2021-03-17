@@ -5,7 +5,7 @@ services:
 
 # Build testing container
 before_install:
-  - docker build -t ankesh/docker-react .
+  - docker build -t ankesh/docker-react -f .
 
 # Run Tests
 script:
@@ -17,7 +17,7 @@ deploy:
     app: "docker-example-app"
     env: "Dockerexampleapp-env" 
     bucket_name: "elasticbeanstalk-ap-south-1-024995093762"
-    bucket_path: "docker-example-app"
+    bucket_path: "docker-react"
     on:
       branch: main
     access_key_id: $AWS_ACCESS_KEY
