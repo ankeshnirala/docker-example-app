@@ -8,9 +8,8 @@ before_install:
   - docker build -t ankesh/docker-react .
 
 # Run Tests
-script:
+script: "echo 'done'"
     # - docker run -e CI=true ankesh/docker-react npm run test -- --coverage
-    script: "echo 'done'"
 
 deploy: 
     provider: elasticbeanstalk 
