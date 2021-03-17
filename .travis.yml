@@ -5,7 +5,7 @@ services:
 
 # Build testing container
 before_install:
-  - docker build -t ankesh/docker-react -f Dockerfile.dev .
+  - docker build -t ankesh/docker-react .
 
 # Run Tests
 script:
