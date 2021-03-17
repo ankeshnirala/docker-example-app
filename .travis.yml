@@ -5,11 +5,11 @@ services:
 
 # Build testing container
 before_install:
-    - docker build -t dynamisdevelopment/test-container -f .
+  - docker build -t ankesh/docker-react -f Dockerfile.dev .
 
 # Run Tests
 script:
-    - docker run -e CI=true dynamisdevelopment/test-container npm test -- --coverage
+    - docker run -e CI=true ankesh/docker-react npm test -- --coverage
 
 deploy: 
     provider: elasticbeanstalk 
