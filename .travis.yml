@@ -10,7 +10,7 @@ before_install:
 # Run Tests
 script:
     # - docker run -e CI=true ankesh/docker-react npm run test -- --coverage
-    script: echo "Success!"
+    script: "echo 'done'"
 
 deploy: 
     provider: elasticbeanstalk 
